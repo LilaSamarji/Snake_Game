@@ -15,7 +15,7 @@ export  function update() {
     export  function draw(gameBoard) {
         const foodElement=document.createElement('div');
         const pic=document.createElement('img');
-        pic.src='/apple.png';
+        pic.src='images/apple.png';
         pic.style.width='40px';
         pic.style.height='40px';
         foodElement.style.gridRowStart=food.y;
