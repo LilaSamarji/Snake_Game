@@ -12,7 +12,7 @@ if(gameOver) {
 
     if(confirm('Game Over! . Press Okay to restart')) {
       
-        window.location= '/'
+        window.location.href= 'index.html'
         
     }
     return 
