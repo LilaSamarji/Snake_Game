@@ -38,12 +38,11 @@ export function getInputDirection() {
 
 //for small screens ( width < 40 px)
 function myFunction(x) {
-    var arrowsdiv=document.getElementById("otherbuttons");
-    var upbutton=document.getElementById("upbutton");
+
     
         
-    const buttons = document.getElementsByTagName("button");
-
+   // const buttons = document.getElementsByTagName("button");
+ const buttons = document.getElementsByTagName("img");
     const buttonPressed = e => {
       console.log(e.target.id);
      

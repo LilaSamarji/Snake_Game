@@ -5,17 +5,15 @@ let lastRenderTime=0;
 let gameOver = false;
 const gameBoard=document.getElementById('game-board')
 
-
 function main(currentTime) {
 if(gameOver) { 
        //document.getElementById("over").innerHTML="Game Over";
-   
-    
+
 
     if(confirm('Game Over! . Press Okay to restart')) {
-       
-        
+      
         window.location= '/'
+        
     }
     return 
 }
@@ -29,7 +27,6 @@ draw();
 }
 window.requestAnimationFrame(main)
 
-
 function update(){
 updateSnake();
 updateFood();
@@ -37,11 +34,16 @@ checkDeath();
 }
 
 function draw(){
+ 
+    document.getElementById("highestScore").innerHTML = "Highest Score:"+localStorage.getItem("highest");
 gameBoard.innerHTML= '';
 drawSnake(gameBoard);
 drawFood(gameBoard);
+
+
 }
 
 function checkDeath() {
     gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
 }
+
